@@ -1,146 +1,145 @@
-/*
-$cyc-icons-prefix: "cyc-icon";
+// $cyc-icons-prefix: "cyc-icon";
 
-$cyc-icons-directions: (right: 0deg, left: 180deg, up: 270deg, down:90deg);
+// $cyc-icons-directions: (right: 0deg, left: 180deg, up: 270deg, down:90deg);
 
-$cyc-icons-colors: (black:"#000000", blue-0:"#0031FF", white:"#FFFFFF", blue:"#0031FF", blue-1:"#0C1D46",);
+// $cyc-icons-colors: (black:"#000000", blue-0:"#0031FF", white:"#FFFFFF", blue:"#0031FF", blue-1:"#0C1D46",);
 
-$cyc-icons-default-color: #000000;
+// $cyc-icons-default-color: #000000;
 
-@function cyc-get-icons($color: '') {
-  //*Importante: por defecto, los iconos siempre deben "apuntar" hacia la derecha
-  $icons-svgs: (
-          "arrow": "<svg width='47' height='8' viewBox='0 0 47 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='3.98047' x2='45.8448' y2='3.98047' stroke='#{$color}' stroke-linecap='round'/><line x1='43.1915' y1='0.621094' x2='46.3464' y2='3.77606' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 42.4844 7.37891)' stroke='#{$color}' stroke-linecap='round'/></svg>",
-          "twitter": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.945312 12C0.945312 5.37258 6.50702 0 13.3677 0C20.2285 0 25.7902 5.37258 25.7902 12C25.7902 18.6274 20.2285 24 13.3677 24C6.50702 24 0.945312 18.6274 0.945312 12ZM18.1038 8.625C18.6473 8.55 19.1131 8.475 19.5789 8.25C19.2684 8.775 18.8025 9.225 18.2591 9.525C18.4143 13.05 15.7746 16.875 11.0385 16.875C9.64101 16.875 8.32113 16.425 7.15652 15.75C8.47641 15.9 9.87393 15.525 10.8056 14.85C9.64101 14.85 8.70933 14.1 8.39877 13.125C8.78697 13.2 9.17517 13.125 9.56337 13.05C8.39877 12.75 7.54473 11.7 7.54473 10.575C7.93293 10.725 8.32113 10.875 8.70933 10.875C7.62237 10.125 7.23417 8.7 7.93293 7.575C9.25281 9.075 11.1162 10.05 13.2125 10.125C12.8243 8.625 14.0665 7.125 15.6969 7.125C16.3957 7.125 17.0945 7.425 17.5603 7.875C18.1814 7.725 18.7249 7.575 19.1907 7.275C19.0355 7.875 18.6473 8.325 18.1038 8.625Z' fill='#{$color}'/></svg> ",
-          "facebook": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.539062 12C0.539062 5.37258 6.10077 0 12.9615 0C19.8222 0 25.3839 5.37258 25.3839 12C25.3839 18.6274 19.8222 24 12.9615 24C6.10077 24 0.539062 18.6274 0.539062 12ZM12.9615 6C16.3777 6 19.1727 8.7 19.1727 12C19.1727 15 16.9211 17.55 13.8155 18V13.725H15.2907L15.6013 12H13.8932V10.875C13.8932 10.425 14.1261 9.975 14.9025 9.975H15.6789V8.475C15.6789 8.475 14.9801 8.325 14.2814 8.325C12.8838 8.325 11.9522 9.15 11.9522 10.65V12H10.3994V13.725H11.9522V17.925C9.00184 17.475 6.75027 15 6.75027 12C6.75027 8.7 9.54532 6 12.9615 6Z' fill='#{$color}'/></svg> ",
-          "instagram": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.7779 14.1C11.6133 14.1 10.604 13.2 10.604 12C10.604 10.875 11.5357 9.9 12.7779 9.9C13.9425 9.9 14.9518 10.8 14.9518 12C14.9518 13.125 13.9425 14.1 12.7779 14.1Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M15.4177 6.9H10.1381C9.51701 6.975 9.20645 7.05 8.97353 7.125C8.66297 7.2 8.43005 7.35 8.19712 7.575C8.01282 7.75304 7.92574 7.93108 7.82048 8.14628C7.79274 8.20299 7.76366 8.26244 7.73128 8.325C7.71927 8.35981 7.7054 8.39641 7.69054 8.43564C7.60932 8.65 7.49836 8.94282 7.49836 9.45V14.55C7.576 15.15 7.65364 15.45 7.73128 15.675C7.80892 15.975 7.9642 16.2 8.19712 16.425C8.38143 16.603 8.56574 16.6872 8.78852 16.7888C8.84727 16.8157 8.90871 16.8437 8.97353 16.875C9.00956 16.8866 9.04745 16.9 9.08806 16.9144C9.30997 16.9928 9.61309 17.1 10.1381 17.1H15.4177C16.0388 17.025 16.3493 16.95 16.5823 16.875C16.8928 16.8 17.1257 16.65 17.3587 16.425C17.543 16.247 17.63 16.0689 17.7353 15.8537C17.7631 15.797 17.7921 15.7376 17.8245 15.675C17.8365 15.6402 17.8504 15.6036 17.8652 15.5644C17.9465 15.35 18.0574 15.0572 18.0574 14.55V9.45C17.9798 8.85 17.9021 8.55 17.8245 8.325C17.7469 8.025 17.5916 7.8 17.3587 7.575C17.1744 7.39696 16.99 7.31284 16.7673 7.21116C16.7086 7.18439 16.647 7.15625 16.5823 7.125C16.5462 7.1134 16.5083 7.1 16.4677 7.08564C16.2458 7.00718 15.9427 6.9 15.4177 6.9ZM12.7779 8.775C10.9145 8.775 9.43937 10.2 9.43937 12C9.43937 13.8 10.9145 15.225 12.7779 15.225C14.6413 15.225 16.1164 13.8 16.1164 12C16.1164 10.2 14.6413 8.775 12.7779 8.775ZM16.9705 8.7C16.9705 9.11421 16.6229 9.45 16.1941 9.45C15.7653 9.45 15.4177 9.11421 15.4177 8.7C15.4177 8.28578 15.7653 7.95 16.1941 7.95C16.6229 7.95 16.9705 8.28578 16.9705 8.7Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0.355469 12C0.355469 5.37258 5.91718 0 12.7779 0C19.6386 0 25.2003 5.37258 25.2003 12C25.2003 18.6274 19.6386 24 12.7779 24C5.91718 24 0.355469 18.6274 0.355469 12ZM10.1381 5.775H15.4177C16.1164 5.85 16.5823 5.925 16.9705 6.075C17.4363 6.3 17.7469 6.45 18.1351 6.825C18.5233 7.2 18.7562 7.575 18.9115 7.95C19.0667 8.325 19.222 8.775 19.222 9.45V14.55C19.1444 15.225 19.0667 15.675 18.9115 16.05C18.6785 16.5 18.5233 16.8 18.1351 17.175C17.7469 17.55 17.3587 17.775 16.9705 17.925C16.5823 18.075 16.1164 18.225 15.4177 18.225H10.1381C9.43937 18.15 8.97353 18.075 8.58533 17.925C8.11948 17.7 7.80892 17.55 7.42072 17.175C7.03252 16.8 6.7996 16.425 6.64432 16.05C6.48904 15.675 6.33376 15.225 6.33376 14.55V9.45C6.4114 8.775 6.48904 8.325 6.64432 7.95C6.87724 7.5 7.03252 7.2 7.42072 6.825C7.80892 6.45 8.19712 6.225 8.58533 6.075C8.97353 5.925 9.43937 5.775 10.1381 5.775Z' fill='#{$color}'/></svg> ",
-          "youtube":"<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.2028 12L11.9419 10.2V13.8L15.2028 12Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0.761719 12C0.761719 5.37258 6.32343 0 13.1841 0C20.0449 0 25.6066 5.37258 25.6066 12C25.6066 18.6274 20.0449 24 13.1841 24C6.32343 24 0.761719 18.6274 0.761719 12ZM17.9978 8.025C18.5413 8.175 18.9295 8.55 19.0848 9.075C19.3954 10.05 19.3954 12 19.3954 12C19.3954 12 19.3954 13.95 19.1624 14.925C19.0072 15.45 18.6189 15.825 18.0755 15.975C17.0661 16.2 13.1841 16.2 13.1841 16.2C13.1841 16.2 9.22449 16.2 8.29281 15.975C7.74933 15.825 7.36113 15.45 7.20585 14.925C6.97293 13.95 6.97293 12 6.97293 12C6.97293 12 6.97293 10.05 7.12821 9.075C7.28349 8.55 7.6717 8.175 8.21518 8.025C9.2245 7.8 13.1065 7.8 13.1065 7.8C13.1065 7.8 17.0662 7.8 17.9978 8.025Z' fill='#{$color}'/></svg> ",
-          "twitterBlog": "<svg width='32' height='32' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.945312 12C0.945312 5.37258 6.50702 0 13.3677 0C20.2285 0 25.7902 5.37258 25.7902 12C25.7902 18.6274 20.2285 24 13.3677 24C6.50702 24 0.945312 18.6274 0.945312 12ZM18.1038 8.625C18.6473 8.55 19.1131 8.475 19.5789 8.25C19.2684 8.775 18.8025 9.225 18.2591 9.525C18.4143 13.05 15.7746 16.875 11.0385 16.875C9.64101 16.875 8.32113 16.425 7.15652 15.75C8.47641 15.9 9.87393 15.525 10.8056 14.85C9.64101 14.85 8.70933 14.1 8.39877 13.125C8.78697 13.2 9.17517 13.125 9.56337 13.05C8.39877 12.75 7.54473 11.7 7.54473 10.575C7.93293 10.725 8.32113 10.875 8.70933 10.875C7.62237 10.125 7.23417 8.7 7.93293 7.575C9.25281 9.075 11.1162 10.05 13.2125 10.125C12.8243 8.625 14.0665 7.125 15.6969 7.125C16.3957 7.125 17.0945 7.425 17.5603 7.875C18.1814 7.725 18.7249 7.575 19.1907 7.275C19.0355 7.875 18.6473 8.325 18.1038 8.625Z' fill='#{$color}'/></svg> ",
-          "facebookBlog": "<svg width='32' height='32' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.539062 12C0.539062 5.37258 6.10077 0 12.9615 0C19.8222 0 25.3839 5.37258 25.3839 12C25.3839 18.6274 19.8222 24 12.9615 24C6.10077 24 0.539062 18.6274 0.539062 12ZM12.9615 6C16.3777 6 19.1727 8.7 19.1727 12C19.1727 15 16.9211 17.55 13.8155 18V13.725H15.2907L15.6013 12H13.8932V10.875C13.8932 10.425 14.1261 9.975 14.9025 9.975H15.6789V8.475C15.6789 8.475 14.9801 8.325 14.2814 8.325C12.8838 8.325 11.9522 9.15 11.9522 10.65V12H10.3994V13.725H11.9522V17.925C9.00184 17.475 6.75027 15 6.75027 12C6.75027 8.7 9.54532 6 12.9615 6Z' fill='#{$color}'/></svg> ",
-          "mail": "<svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='16' cy='16' r='16' fill='#{$color}'/><g clip-path='url(#clip0_1567_6537)'><path d='M24.3307 10.9997C24.3307 10.083 23.5807 9.33301 22.6641 9.33301H9.33073C8.41406 9.33301 7.66406 10.083 7.66406 10.9997V20.9997C7.66406 21.9163 8.41406 22.6663 9.33073 22.6663H22.6641C23.5807 22.6663 24.3307 21.9163 24.3307 20.9997V10.9997ZM22.6641 10.9997L15.9974 15.1663L9.33073 10.9997H22.6641ZM22.6641 20.9997H9.33073V12.6663L15.9974 16.833L22.6641 12.6663V20.9997Z' fill='white'/></g><defs><clipPath id='clip0_1567_6537'><rect width='20' height='20' fill='white' transform='translate(6 6)'/></clipPath></defs></svg>",
-          "quote": "<svg width='94' height='78' viewBox='0 0 94 78' fill='none' xmlns='http://www.w3.org/2000/svg'><ellipse cx='20.0333' cy='57.9788' rx='20.0333' ry='20.0213' fill='#{$color}'/><line y1='-0.5' x2='61.003' y2='-0.5' transform='matrix(0.707319 -0.706895 0.707319 0.706895 1.53906 44.1226)' stroke='#{$color}'/><ellipse cx='69.3458' cy='57.9788' rx='20.0333' ry='20.0213' fill='#{$color}'/><line y1='-0.5' x2='61.003' y2='-0.5' transform='matrix(0.707319 -0.706895 0.707319 0.706895 50.8516 44.1226)' stroke='#{$color}'/></svg> ",
-          "dropdown": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$color}' class='bi bi-chevron-down' viewBox='0 0 16 16'> <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>",
-          "prevArrow": "<svg width='24' height='8' viewBox='0 0 24 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='20.5' y1='4.5' x2='1.5' y2='4.5' stroke='#{$color}' stroke-linecap='round'/><line x1='3.80852' y1='8' x2='0.653556' y2='4.84503' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(-0.707106 0.707107 0.707107 0.707106 4.51562 1.24219)' stroke='#{$color}' stroke-linecap='round'/></svg>",
-          "nextArrow": "<svg width='24' height='8' viewBox='0 0 24 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='4.5' x2='19.5' y2='4.5' stroke='#{$color}' stroke-linecap='round'/><line x1='17.1915' y1='1' x2='20.3464' y2='4.15497' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 16.4844 7.75781)' stroke='#{$color}' stroke-linecap='round'/></svg>",
-          "arrow95": "<svg width='95' height='15' viewBox='0 0 95 15' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='7.5' x2='93.5' y2='7.50001' stroke='#{$color}' stroke-linecap='round'/><line x1='87.7071' y1='1' x2='94.1294' y2='7.42228' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='9.58247' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 87 14.1289)' stroke='#{$color}' stroke-linecap='round'/></svg>",
-);
-  @return $icons-svgs;
-}
+// @function cyc-get-icons($color: '') {
+//   //*Importante: por defecto, los iconos siempre deben "apuntar" hacia la derecha
+//   $icons-svgs: (
+//           "arrow": "<svg width='47' height='8' viewBox='0 0 47 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='3.98047' x2='45.8448' y2='3.98047' stroke='#{$color}' stroke-linecap='round'/><line x1='43.1915' y1='0.621094' x2='46.3464' y2='3.77606' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 42.4844 7.37891)' stroke='#{$color}' stroke-linecap='round'/></svg>",
+//           "twitter": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.945312 12C0.945312 5.37258 6.50702 0 13.3677 0C20.2285 0 25.7902 5.37258 25.7902 12C25.7902 18.6274 20.2285 24 13.3677 24C6.50702 24 0.945312 18.6274 0.945312 12ZM18.1038 8.625C18.6473 8.55 19.1131 8.475 19.5789 8.25C19.2684 8.775 18.8025 9.225 18.2591 9.525C18.4143 13.05 15.7746 16.875 11.0385 16.875C9.64101 16.875 8.32113 16.425 7.15652 15.75C8.47641 15.9 9.87393 15.525 10.8056 14.85C9.64101 14.85 8.70933 14.1 8.39877 13.125C8.78697 13.2 9.17517 13.125 9.56337 13.05C8.39877 12.75 7.54473 11.7 7.54473 10.575C7.93293 10.725 8.32113 10.875 8.70933 10.875C7.62237 10.125 7.23417 8.7 7.93293 7.575C9.25281 9.075 11.1162 10.05 13.2125 10.125C12.8243 8.625 14.0665 7.125 15.6969 7.125C16.3957 7.125 17.0945 7.425 17.5603 7.875C18.1814 7.725 18.7249 7.575 19.1907 7.275C19.0355 7.875 18.6473 8.325 18.1038 8.625Z' fill='#{$color}'/></svg> ",
+//           "facebook": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.539062 12C0.539062 5.37258 6.10077 0 12.9615 0C19.8222 0 25.3839 5.37258 25.3839 12C25.3839 18.6274 19.8222 24 12.9615 24C6.10077 24 0.539062 18.6274 0.539062 12ZM12.9615 6C16.3777 6 19.1727 8.7 19.1727 12C19.1727 15 16.9211 17.55 13.8155 18V13.725H15.2907L15.6013 12H13.8932V10.875C13.8932 10.425 14.1261 9.975 14.9025 9.975H15.6789V8.475C15.6789 8.475 14.9801 8.325 14.2814 8.325C12.8838 8.325 11.9522 9.15 11.9522 10.65V12H10.3994V13.725H11.9522V17.925C9.00184 17.475 6.75027 15 6.75027 12C6.75027 8.7 9.54532 6 12.9615 6Z' fill='#{$color}'/></svg> ",
+//           "instagram": "<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.7779 14.1C11.6133 14.1 10.604 13.2 10.604 12C10.604 10.875 11.5357 9.9 12.7779 9.9C13.9425 9.9 14.9518 10.8 14.9518 12C14.9518 13.125 13.9425 14.1 12.7779 14.1Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M15.4177 6.9H10.1381C9.51701 6.975 9.20645 7.05 8.97353 7.125C8.66297 7.2 8.43005 7.35 8.19712 7.575C8.01282 7.75304 7.92574 7.93108 7.82048 8.14628C7.79274 8.20299 7.76366 8.26244 7.73128 8.325C7.71927 8.35981 7.7054 8.39641 7.69054 8.43564C7.60932 8.65 7.49836 8.94282 7.49836 9.45V14.55C7.576 15.15 7.65364 15.45 7.73128 15.675C7.80892 15.975 7.9642 16.2 8.19712 16.425C8.38143 16.603 8.56574 16.6872 8.78852 16.7888C8.84727 16.8157 8.90871 16.8437 8.97353 16.875C9.00956 16.8866 9.04745 16.9 9.08806 16.9144C9.30997 16.9928 9.61309 17.1 10.1381 17.1H15.4177C16.0388 17.025 16.3493 16.95 16.5823 16.875C16.8928 16.8 17.1257 16.65 17.3587 16.425C17.543 16.247 17.63 16.0689 17.7353 15.8537C17.7631 15.797 17.7921 15.7376 17.8245 15.675C17.8365 15.6402 17.8504 15.6036 17.8652 15.5644C17.9465 15.35 18.0574 15.0572 18.0574 14.55V9.45C17.9798 8.85 17.9021 8.55 17.8245 8.325C17.7469 8.025 17.5916 7.8 17.3587 7.575C17.1744 7.39696 16.99 7.31284 16.7673 7.21116C16.7086 7.18439 16.647 7.15625 16.5823 7.125C16.5462 7.1134 16.5083 7.1 16.4677 7.08564C16.2458 7.00718 15.9427 6.9 15.4177 6.9ZM12.7779 8.775C10.9145 8.775 9.43937 10.2 9.43937 12C9.43937 13.8 10.9145 15.225 12.7779 15.225C14.6413 15.225 16.1164 13.8 16.1164 12C16.1164 10.2 14.6413 8.775 12.7779 8.775ZM16.9705 8.7C16.9705 9.11421 16.6229 9.45 16.1941 9.45C15.7653 9.45 15.4177 9.11421 15.4177 8.7C15.4177 8.28578 15.7653 7.95 16.1941 7.95C16.6229 7.95 16.9705 8.28578 16.9705 8.7Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0.355469 12C0.355469 5.37258 5.91718 0 12.7779 0C19.6386 0 25.2003 5.37258 25.2003 12C25.2003 18.6274 19.6386 24 12.7779 24C5.91718 24 0.355469 18.6274 0.355469 12ZM10.1381 5.775H15.4177C16.1164 5.85 16.5823 5.925 16.9705 6.075C17.4363 6.3 17.7469 6.45 18.1351 6.825C18.5233 7.2 18.7562 7.575 18.9115 7.95C19.0667 8.325 19.222 8.775 19.222 9.45V14.55C19.1444 15.225 19.0667 15.675 18.9115 16.05C18.6785 16.5 18.5233 16.8 18.1351 17.175C17.7469 17.55 17.3587 17.775 16.9705 17.925C16.5823 18.075 16.1164 18.225 15.4177 18.225H10.1381C9.43937 18.15 8.97353 18.075 8.58533 17.925C8.11948 17.7 7.80892 17.55 7.42072 17.175C7.03252 16.8 6.7996 16.425 6.64432 16.05C6.48904 15.675 6.33376 15.225 6.33376 14.55V9.45C6.4114 8.775 6.48904 8.325 6.64432 7.95C6.87724 7.5 7.03252 7.2 7.42072 6.825C7.80892 6.45 8.19712 6.225 8.58533 6.075C8.97353 5.925 9.43937 5.775 10.1381 5.775Z' fill='#{$color}'/></svg> ",
+//           "youtube":"<svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.2028 12L11.9419 10.2V13.8L15.2028 12Z' fill='#{$color}'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0.761719 12C0.761719 5.37258 6.32343 0 13.1841 0C20.0449 0 25.6066 5.37258 25.6066 12C25.6066 18.6274 20.0449 24 13.1841 24C6.32343 24 0.761719 18.6274 0.761719 12ZM17.9978 8.025C18.5413 8.175 18.9295 8.55 19.0848 9.075C19.3954 10.05 19.3954 12 19.3954 12C19.3954 12 19.3954 13.95 19.1624 14.925C19.0072 15.45 18.6189 15.825 18.0755 15.975C17.0661 16.2 13.1841 16.2 13.1841 16.2C13.1841 16.2 9.22449 16.2 8.29281 15.975C7.74933 15.825 7.36113 15.45 7.20585 14.925C6.97293 13.95 6.97293 12 6.97293 12C6.97293 12 6.97293 10.05 7.12821 9.075C7.28349 8.55 7.6717 8.175 8.21518 8.025C9.2245 7.8 13.1065 7.8 13.1065 7.8C13.1065 7.8 17.0662 7.8 17.9978 8.025Z' fill='#{$color}'/></svg> ",
+//           "twitterBlog": "<svg width='32' height='32' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.945312 12C0.945312 5.37258 6.50702 0 13.3677 0C20.2285 0 25.7902 5.37258 25.7902 12C25.7902 18.6274 20.2285 24 13.3677 24C6.50702 24 0.945312 18.6274 0.945312 12ZM18.1038 8.625C18.6473 8.55 19.1131 8.475 19.5789 8.25C19.2684 8.775 18.8025 9.225 18.2591 9.525C18.4143 13.05 15.7746 16.875 11.0385 16.875C9.64101 16.875 8.32113 16.425 7.15652 15.75C8.47641 15.9 9.87393 15.525 10.8056 14.85C9.64101 14.85 8.70933 14.1 8.39877 13.125C8.78697 13.2 9.17517 13.125 9.56337 13.05C8.39877 12.75 7.54473 11.7 7.54473 10.575C7.93293 10.725 8.32113 10.875 8.70933 10.875C7.62237 10.125 7.23417 8.7 7.93293 7.575C9.25281 9.075 11.1162 10.05 13.2125 10.125C12.8243 8.625 14.0665 7.125 15.6969 7.125C16.3957 7.125 17.0945 7.425 17.5603 7.875C18.1814 7.725 18.7249 7.575 19.1907 7.275C19.0355 7.875 18.6473 8.325 18.1038 8.625Z' fill='#{$color}'/></svg> ",
+//           "facebookBlog": "<svg width='32' height='32' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.539062 12C0.539062 5.37258 6.10077 0 12.9615 0C19.8222 0 25.3839 5.37258 25.3839 12C25.3839 18.6274 19.8222 24 12.9615 24C6.10077 24 0.539062 18.6274 0.539062 12ZM12.9615 6C16.3777 6 19.1727 8.7 19.1727 12C19.1727 15 16.9211 17.55 13.8155 18V13.725H15.2907L15.6013 12H13.8932V10.875C13.8932 10.425 14.1261 9.975 14.9025 9.975H15.6789V8.475C15.6789 8.475 14.9801 8.325 14.2814 8.325C12.8838 8.325 11.9522 9.15 11.9522 10.65V12H10.3994V13.725H11.9522V17.925C9.00184 17.475 6.75027 15 6.75027 12C6.75027 8.7 9.54532 6 12.9615 6Z' fill='#{$color}'/></svg> ",
+//           "mail": "<svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='16' cy='16' r='16' fill='#{$color}'/><g clip-path='url(#clip0_1567_6537)'><path d='M24.3307 10.9997C24.3307 10.083 23.5807 9.33301 22.6641 9.33301H9.33073C8.41406 9.33301 7.66406 10.083 7.66406 10.9997V20.9997C7.66406 21.9163 8.41406 22.6663 9.33073 22.6663H22.6641C23.5807 22.6663 24.3307 21.9163 24.3307 20.9997V10.9997ZM22.6641 10.9997L15.9974 15.1663L9.33073 10.9997H22.6641ZM22.6641 20.9997H9.33073V12.6663L15.9974 16.833L22.6641 12.6663V20.9997Z' fill='white'/></g><defs><clipPath id='clip0_1567_6537'><rect width='20' height='20' fill='white' transform='translate(6 6)'/></clipPath></defs></svg>",
+//           "quote": "<svg width='94' height='78' viewBox='0 0 94 78' fill='none' xmlns='http://www.w3.org/2000/svg'><ellipse cx='20.0333' cy='57.9788' rx='20.0333' ry='20.0213' fill='#{$color}'/><line y1='-0.5' x2='61.003' y2='-0.5' transform='matrix(0.707319 -0.706895 0.707319 0.706895 1.53906 44.1226)' stroke='#{$color}'/><ellipse cx='69.3458' cy='57.9788' rx='20.0333' ry='20.0213' fill='#{$color}'/><line y1='-0.5' x2='61.003' y2='-0.5' transform='matrix(0.707319 -0.706895 0.707319 0.706895 50.8516 44.1226)' stroke='#{$color}'/></svg> ",
+//           "dropdown": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$color}' class='bi bi-chevron-down' viewBox='0 0 16 16'> <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>",
+//           "prevArrow": "<svg width='24' height='8' viewBox='0 0 24 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='20.5' y1='4.5' x2='1.5' y2='4.5' stroke='#{$color}' stroke-linecap='round'/><line x1='3.80852' y1='8' x2='0.653556' y2='4.84503' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(-0.707106 0.707107 0.707107 0.707106 4.51562 1.24219)' stroke='#{$color}' stroke-linecap='round'/></svg>",
+//           "nextArrow": "<svg width='24' height='8' viewBox='0 0 24 8' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='4.5' x2='19.5' y2='4.5' stroke='#{$color}' stroke-linecap='round'/><line x1='17.1915' y1='1' x2='20.3464' y2='4.15497' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='4.96179' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 16.4844 7.75781)' stroke='#{$color}' stroke-linecap='round'/></svg>",
+//           "arrow95": "<svg width='95' height='15' viewBox='0 0 95 15' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='0.5' y1='7.5' x2='93.5' y2='7.50001' stroke='#{$color}' stroke-linecap='round'/><line x1='87.7071' y1='1' x2='94.1294' y2='7.42228' stroke='#{$color}' stroke-linecap='round'/><line x1='0.5' y1='-0.5' x2='9.58247' y2='-0.5' transform='matrix(0.707106 -0.707107 -0.707107 -0.707106 87 14.1289)' stroke='#{$color}' stroke-linecap='round'/></svg>",
+// );
+//   @return $icons-svgs;
+// }
 
-@function cyc-icon-svg($name, $color) {
-  @return map-get(cyc-get-icons($color), $name);
-}
+// @function cyc-icon-svg($name, $color) {
+//   @return map-get(cyc-get-icons($color), $name);
+// }
 
-@function cyc-icon-svg-url($name, $color) {
-  $svg: cyc-icon-svg($name, $color);
+// @function cyc-icon-svg-url($name, $color) {
+//   $svg: cyc-icon-svg($name, $color);
 
-  $encoded: '';
-  $index: 0;
-  $slice: 2000;
+//   $encoded: '';
+//   $index: 0;
+//   $slice: 2000;
 
-  $loops: ceil(clay-div(str-length($svg), $slice));
+//   $loops: ceil(clay-div(str-length($svg), $slice));
 
-  @for $i from 1 through $loops {
-    $chunk: str-slice($svg, $index, $index + $slice - 1);
+//   @for $i from 1 through $loops {
+//     $chunk: str-slice($svg, $index, $index + $slice - 1);
 
-    $chunk: clay-str-replace($chunk, '"', "'");
-    $chunk: clay-str-replace($chunk, ' ', '%20');
-    $chunk: clay-str-replace($chunk, '{', '%7B');
-    $chunk: clay-str-replace($chunk, '}', '%7D');
-    $chunk: clay-str-replace($chunk, '<', '%3C');
-    $chunk: clay-str-replace($chunk, '>', '%3E');
-    $chunk: clay-str-replace($chunk, '&', '%26');
-    $chunk: clay-str-replace($chunk, '#', '%23');
+//     $chunk: clay-str-replace($chunk, '"', "'");
+//     $chunk: clay-str-replace($chunk, ' ', '%20');
+//     $chunk: clay-str-replace($chunk, '{', '%7B');
+//     $chunk: clay-str-replace($chunk, '}', '%7D');
+//     $chunk: clay-str-replace($chunk, '<', '%3C');
+//     $chunk: clay-str-replace($chunk, '>', '%3E');
+//     $chunk: clay-str-replace($chunk, '&', '%26');
+//     $chunk: clay-str-replace($chunk, '#', '%23');
 
-    $encoded: #{$encoded}#{$chunk};
+//     $encoded: #{$encoded}#{$chunk};
 
-    $index: $index + $slice;
-  }
+//     $index: $index + $slice;
+//   }
 
-  @return url('data:image/svg+xml;charset=utf8,#{$encoded}');
+//   @return url('data:image/svg+xml;charset=utf8,#{$encoded}');
 
-}
+// }
 
-//estilos generales para cualquier .cyc-icon-***
-[class^='#{$cyc-icons-prefix}'] {
-  display: inline-block;
-}
+// //estilos generales para cualquier .cyc-icon-***
+// [class^='#{$cyc-icons-prefix}'] {
+//   display: inline-block;
+// }
 
-//[PREFIX]-[NAME]
-@each $icon-name, $icon-svg in cyc-get-icons($cyc-icons-default-color) {
-  .#{$cyc-icons-prefix}-#{$icon-name} {
-    &::before {
-      content: cyc-icon-svg-url($icon-name, $cyc-icons-default-color);
-    }
-  }
-}
+// //[PREFIX]-[NAME]
+// @each $icon-name, $icon-svg in cyc-get-icons($cyc-icons-default-color) {
+//   .#{$cyc-icons-prefix}-#{$icon-name} {
+//     &::before {
+//       content: cyc-icon-svg-url($icon-name, $cyc-icons-default-color);
+//     }
+//   }
+// }
 
-//[PREFIX]-[NAME]-[COLOR]
-@each $color-name, $color-value in $cyc-icons-colors {
-  @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
-    .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name} {
-      &::before {
-        content: cyc-icon-svg-url($icon-name, $color-value);
-      }
-    }
-  }
-}
+// //[PREFIX]-[NAME]-[COLOR]
+// @each $color-name, $color-value in $cyc-icons-colors {
+//   @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
+//     .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name} {
+//       &::before {
+//         content: cyc-icon-svg-url($icon-name, $color-value);
+//       }
+//     }
+//   }
+// }
 
-//[PREFIX]-[NAME]-[COLOR]-[DIRECTION]
-@each $color-name, $color-value in $cyc-icons-colors {
-  @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
-    @each $direction-name, $direction-value in $cyc-icons-directions {
-      .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name}-#{$direction-name} {
-        transform: rotate(#{$direction-value});
-        &::before {
-          content: cyc-icon-svg-url($icon-name, $color-value);
-        }
-      }
-    }
-  }
-}
+// //[PREFIX]-[NAME]-[COLOR]-[DIRECTION]
+// @each $color-name, $color-value in $cyc-icons-colors {
+//   @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
+//     @each $direction-name, $direction-value in $cyc-icons-directions {
+//       .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name}-#{$direction-name} {
+//         transform: rotate(#{$direction-value});
+//         &::before {
+//           content: cyc-icon-svg-url($icon-name, $color-value);
+//         }
+//       }
+//     }
+//   }
+// }
 
-//[PREFIX]-[NAME]-[DIRECTION]
-@each $icon-name, $icon-svg in cyc-get-icons($cyc-icons-default-color) {
-  @each $direction-name, $direction-value in $cyc-icons-directions {
-    .#{$cyc-icons-prefix}-#{$icon-name}-#{$direction-name} {
-      transform: rotate(#{$direction-value});
-      &::before {
-        content: cyc-icon-svg-url($icon-name, $cyc-icons-default-color);
-      }
-    }
-  }
-}
+// //[PREFIX]-[NAME]-[DIRECTION]
+// @each $icon-name, $icon-svg in cyc-get-icons($cyc-icons-default-color) {
+//   @each $direction-name, $direction-value in $cyc-icons-directions {
+//     .#{$cyc-icons-prefix}-#{$icon-name}-#{$direction-name} {
+//       transform: rotate(#{$direction-value});
+//       &::before {
+//         content: cyc-icon-svg-url($icon-name, $cyc-icons-default-color);
+//       }
+//     }
+//   }
+// }
 
-//[PREFIX]-[NAME]-[COLOR]-[SIZE]-[VW(OPTIONAL)]
-@each $color-name, $color-value in $cyc-icons-colors {
-  @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
-    @for $i from 1 through 64 {
-      .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name}-#{$i} {
-        &::before {
-          background-image: cyc-icon-svg-url($icon-name, $color-value);
-          background-size: #{$i}px #{$i}px;
-          height: #{$i}px;
-          width: #{$i}px;
-          display: inline-block;
-          content: "";
-        }
-        &-vw{
-          &::before {
-            background-image: cyc-icon-svg-url($icon-name, $color-value);
-            background-size: vw($i, $mobile-viewport-width) vw($i, $mobile-viewport-width);
-            height: vw($i, $mobile-viewport-width);
-            width: vw($i, $mobile-viewport-width);
-            display: inline-block;
-            content: "";
-            @media (min-width: 768px) {
-              background-size: vw($i, $desktop-viewport-width) vw($i, $desktop-viewport-width);
-              height: vw($i, $desktop-viewport-width);
-              width: vw($i, $desktop-viewport-width);
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// //[PREFIX]-[NAME]-[COLOR]-[SIZE]-[VW(OPTIONAL)]
+// @each $color-name, $color-value in $cyc-icons-colors {
+//   @each $icon-name, $icon-svg in cyc-get-icons($color-value) {
+//     @for $i from 1 through 64 {
+//       .#{$cyc-icons-prefix}-#{$icon-name}-#{$color-name}-#{$i} {
+//         &::before {
+//           background-image: cyc-icon-svg-url($icon-name, $color-value);
+//           background-size: #{$i}px #{$i}px;
+//           height: #{$i}px;
+//           width: #{$i}px;
+//           display: inline-block;
+//           content: "";
+//         }
+//         &-vw{
+//           &::before {
+//             background-image: cyc-icon-svg-url($icon-name, $color-value);
+//             background-size: vw($i, $mobile-viewport-width) vw($i, $mobile-viewport-width);
+//             height: vw($i, $mobile-viewport-width);
+//             width: vw($i, $mobile-viewport-width);
+//             display: inline-block;
+//             content: "";
+//             @media (min-width: 768px) {
+//               background-size: vw($i, $desktop-viewport-width) vw($i, $desktop-viewport-width);
+//               height: vw($i, $desktop-viewport-width);
+//               width: vw($i, $desktop-viewport-width);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

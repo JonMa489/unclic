@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
     <!--  Custom CSS -->
     <link href="css/unclic-theme.css" rel="stylesheet" type="text/css">
 
@@ -32,44 +31,81 @@
     <title>Universidad de Navarra</title>
 </head>
 
-<body class="unclic">
+<body class="">
 
     <!-- Header -->
-    <header class="unclic-header">
-        <div class="row background-yellow">
-            <div class="col-12">
-                <p>
-                    UNews
-                </p>
-                <p>
-                    <sup>Nº</sup>683
-                </p>
-            </div>
-            <div class="col-12">
-                <p>
-                    21 al 27 de enero de 2023
-                </p>
-                <p>
-                    Boletín interno de los profesionales de la 
-                    Universidad de Navarra
-                </p>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p>
-                    Talento académico  
-                </p>
-                <p>
-                    Cerca de 350 profesores y estudiantes participaron en la jornada sobre la vida académica que tuvo lugar en el auditorio del Museo del campus de Pamplona.
-                </p>
-            </div>
-            <div class="col-12 col-lg-6 d-none d-md-block d-lg-block background-blue"></div>
-        </div>
-    </header>
+    <header>
 
+        <div class="container">
+            <!-- TODO: Revisar si basta con un container general (o uno en header y otro en body)  -->
+            <div class="header">
+                <div class="row background-yellow">
+                    <div class="col-12">
+                        <p>
+                            UNews
+                        </p>
+                        <p>
+                            <sup>Nº</sup>683
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            21 al 27 de enero de 2023
+                        </p>
+                        <p>
+                            Boletín interno de los profesionales de la
+                            Universidad de Navarra
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            Talento académico
+                        </p>
+                        <p>
+                            Cerca de 350 profesores y estudiantes participaron en la jornada sobre la vida académica que
+                            tuvo lugar en el auditorio del Museo del campus de Pamplona.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 d-none d-md-block background-blue"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-header container">
+
+        </div>
+
+    </header>
 
     <!-- Main Content -->
     <main role="main">
-        <div class="row background-blue">
+        <div class="container">
+
+            <!-- 3 big carsd .... -->
+            <div class="col-12 col-lg-4">
+                <div class="card-big">
+                    <h2 class="pill">Francisco Pérez-Latre: “Para recuperar la confianza hay que tratar a las personas
+                        como personas”</h2>
+                    <div class="title"></div>
+                    <div class="subtitle"></div>
+                    <div class="text"></div>
+                    <div class="image"></div>
+                </div>
+                <p>
+
+                </p>
+            </div>
+            <div class="col-12 col-lg-4">
+            </div>
+            <div class="col-12 col-lg-4">
+                <p>
+                    Francisco Pérez-Latre: “Para recuperar la confianza hay que tratar a las personas como personas”
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row">
             <div class="col-12 col-lg-4">
                 <p>
                     Francisco Pérez-Latre: “Para recuperar la confianza hay que tratar a las personas como personas”
@@ -152,7 +188,7 @@
         crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/main.js"></script>
-        
+
 </body>
 
 </html>
