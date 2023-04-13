@@ -1,0 +1,89 @@
+.home {
+  .header {
+    padding-top: rem(30);
+    padding-bottom: rem(32);
+    color: $unclic-white-0;
+    position: relative;
+    .LogoUNAV{
+        position: absolute;
+        right: 0;
+    }
+    .title-menu {
+      margin-bottom: rem(30);
+    }
+    .card-numeration {
+      padding-top: rem(12);
+      padding-bottom: rem(13);
+    }
+    .card-new {
+      padding-top: rem(58);
+      .pill{
+        border-color: $unclic-white-0;
+      }
+      .title-top,
+      .text-top,
+      .link {
+        margin-top: rem(30);
+      }
+      .link {
+        svg {
+          margin-right: rem(10);
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .header {
+      padding-top: rem(34);
+      padding-bottom: rem(49);
+      .title-menu {
+        margin-bottom: rem(30);
+      }
+      .card-numeration {
+        padding-top: rem(17);
+        padding-bottom: rem(20);
+      }
+      .card-new {
+        padding-top: rem(297);
+        .title-top,
+        .text-top,
+        .link {
+          margin-top: rem(30);
+        }
+        .link {
+          color: $unclic-white-0;
+          svg {
+            margin-right: rem(10);
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .header {
+      padding-top: rem(42);
+      padding-bottom: rem(153);
+      .title-menu {
+        margin-bottom: rem(30);
+      }
+      .card-numeration {
+        padding-top: rem(34);
+        padding-bottom: rem(47);
+      }
+      .card-new {
+        padding-top: rem(50);
+        .title-top,
+        .text-top,
+        .link {
+          margin-top: rem(30);
+        }
+        .link {
+          color: $unclic-white-0;
+          svg {
+            margin-right: rem(10);
+          }
+        }
+      }
+    }
+  }
+}

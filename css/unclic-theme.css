@@ -1,7 +1,15 @@
-body {
-  background-color: #E5E5E5;
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/dm-sans-regular-400.woff2") format("woff2"), url("../fonts/dm-sans-regular-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: "Dm Sans Italic";
+  src: url("../fonts/dm-sans-regular-400-italic.woff2") format("woff2"), url("../fonts/dm-sans-regular-400-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
 .background-blue {
   background-color: rgb(146, 146, 227);
 }
@@ -18,7 +26,237 @@ body {
   background-color: rgb(226, 75, 75);
 }
 
-.col-12, .row {
-  padding: 0;
-  margin: 0;
+body {
+  background-color: #E5E5E5;
+}
+
+.title-menu {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.0625rem;
+  line-height: 7.5rem;
+  letter-spacing: -0.06em;
+}
+@media (min-width: 768px) {
+  .title-menu {
+    font-size: 7.75rem;
+    line-height: 7.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .title-menu {
+    font-size: 9rem;
+    line-height: 7.5rem;
+  }
+}
+
+.title {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+
+.title-top {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  .title-top {
+    line-height: 2.625rem;
+  }
+}
+
+.text {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  letter-spacing: -0.03em;
+}
+
+.text-top {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  .text-top {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+
+.text-numeration {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  .text-numeration {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .text-numeration {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+.link {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  letter-spacing: -0.03em;
+}
+
+.pill {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1.1875rem;
+  display: inline-block;
+  border: 1px solid #000000;
+  border-radius: 1.25rem;
+}
+@media (min-width: 768px) {
+  .pill {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+.subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid;
+  padding-bottom: 0.25rem;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .pill {
+    padding: 0.625rem 1.625rem;
+  }
+}
+.home .header {
+  padding-top: 1.875rem;
+  padding-bottom: 2rem;
+  color: #FFFFFF;
+  position: relative;
+}
+.home .header .LogoUNAV {
+  position: absolute;
+  right: 0;
+}
+.home .header .title-menu {
+  margin-bottom: 1.875rem;
+}
+.home .header .card-numeration {
+  padding-top: 0.75rem;
+  padding-bottom: 0.8125rem;
+}
+.home .header .card-new {
+  padding-top: 3.625rem;
+}
+.home .header .card-new .pill {
+  border-color: #FFFFFF;
+}
+.home .header .card-new .title-top,
+.home .header .card-new .text-top,
+.home .header .card-new .link {
+  margin-top: 1.875rem;
+}
+.home .header .card-new .link svg {
+  margin-right: 0.625rem;
+}
+@media (min-width: 768px) {
+  .home .header {
+    padding-top: 2.125rem;
+    padding-bottom: 3.0625rem;
+  }
+  .home .header .title-menu {
+    margin-bottom: 1.875rem;
+  }
+  .home .header .card-numeration {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.25rem;
+  }
+  .home .header .card-new {
+    padding-top: 18.5625rem;
+  }
+  .home .header .card-new .title-top,
+  .home .header .card-new .text-top,
+  .home .header .card-new .link {
+    margin-top: 1.875rem;
+  }
+  .home .header .card-new .link {
+    color: #FFFFFF;
+  }
+  .home .header .card-new .link svg {
+    margin-right: 0.625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .home .header {
+    padding-top: 2.625rem;
+    padding-bottom: 9.5625rem;
+  }
+  .home .header .title-menu {
+    margin-bottom: 1.875rem;
+  }
+  .home .header .card-numeration {
+    padding-top: 2.125rem;
+    padding-bottom: 2.9375rem;
+  }
+  .home .header .card-new {
+    padding-top: 3.125rem;
+  }
+  .home .header .card-new .title-top,
+  .home .header .card-new .text-top,
+  .home .header .card-new .link {
+    margin-top: 1.875rem;
+  }
+  .home .header .card-new .link {
+    color: #FFFFFF;
+  }
+  .home .header .card-new .link svg {
+    margin-right: 0.625rem;
+  }
+}
+
+.banner-header {
+  background-color: greenyellow;
+  height: rem(60);
 }/*# sourceMappingURL=unclic-theme.css.map */

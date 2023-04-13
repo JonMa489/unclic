@@ -1,3 +1,42 @@
-body{
-    background-color: $unclic-white-1;
+body {
+  background-color: $unclic-white-1;
+}
+.title-menu{
+    @include title-menu-dm-sans;
+}
+.title {
+  @include title-dm-sans;
+}
+.title-top {
+  @include title-top-dm-sans;
+}
+.text {
+  @include text-dm-sans;
+}
+.text-top {
+  @include text-top-dm-sans;
+}
+.text-numeration{
+  @include text-numeration-dm-sans;
+}
+.link{
+  @include text-dm-sans;
+}
+.pill {
+  @include pill-dm-sans;
+  padding: rem(8) rem(19);
+  display: inline-block;
+  border: 1px solid $unclic-black-0;
+  border-radius: rem(20);
+}
+.subtitle {
+  @include subtitle-dm-sans;
+  border-bottom: 1px solid;
+  padding-bottom: rem(4);
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .pill {
+    padding: rem(10) rem(26);
+  }
 }

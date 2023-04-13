@@ -1,0 +1,84 @@
+@mixin dm-sans {
+  font-family: $font_dm_sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin title-dm-sans {
+  @include dm-sans;
+  font-size: rem(28);
+  line-height: rem(32);
+  letter-spacing: -0.03em;
+  @media (min-width: 768px) {
+    font-size: rem(32);
+    line-height: rem(38);
+  }
+}
+@mixin title-top-dm-sans {
+  @include dm-sans;
+  font-size: rem(64);
+  line-height: rem(60);
+  letter-spacing: -0.03em;
+  @media (min-width: 768px) {
+    line-height: rem(42);
+  }
+}
+@mixin text-dm-sans {
+  @include dm-sans;
+  font-size: rem(18);
+  line-height: rem(23);
+  letter-spacing: -0.03em;
+}
+@mixin text-top-dm-sans {
+  @include dm-sans;
+  font-size: rem(28);
+  line-height: rem(32);
+  letter-spacing: -0.03em;
+  @media (min-width: 768px) {
+    font-size: rem(32);
+    line-height: rem(38);
+  }
+}
+@mixin pill-dm-sans {
+  @include dm-sans;
+  font-size: rem(16);
+  line-height: rem(21);
+  letter-spacing: 0.02em;
+  @media (min-width: 768px) {
+    font-size: rem(18);
+    line-height: rem(23);
+  }
+}
+@mixin subtitle-dm-sans {
+  @include dm-sans;
+  font-size: rem(18);
+  line-height: rem(23);
+  letter-spacing: -0.03em;
+}
+@mixin title-menu-dm-sans {
+  @include dm-sans;
+  font-size: rem(65);
+  line-height: rem(120);
+  letter-spacing: -0.06em;
+  @media (min-width: 768px) {
+    font-size: rem(124);
+    line-height: rem(120);
+  }
+  @media (min-width: 1200px) {
+    font-size: rem(144);
+    line-height: rem(120);
+  }
+}
+@mixin text-numeration-dm-sans {
+  @include dm-sans;
+  font-size: rem(14);
+  line-height: rem(18);
+  letter-spacing: -0.03em;
+  @media (min-width: 768px) {
+    font-size: rem(18);
+    line-height: rem(23);
+  }
+  @media (min-width: 1200px) {
+    font-size: rem(22);
+    line-height: rem(26);
+  }
+}
