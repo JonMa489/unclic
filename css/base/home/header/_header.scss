@@ -1,0 +1,117 @@
+.header-home {
+    color: $unclic-white-0;
+    .container {
+      padding-top: rem(32);
+      padding-bottom: rem(32);
+      .space-bottom {
+        border-bottom: 1px solid $unclic-white-0;
+        width: 300%;
+        position: absolute;
+        left: -100%;
+      }
+      .title-menu {
+        margin-bottom: rem(30);
+      }
+      .text-numeration {
+        margin-top: rem(12);
+        margin-bottom: rem(32);
+      }
+      .rigth-margin {
+        right: rem(56);
+        position: absolute;
+        top: rem(12);
+        .text-numeration {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+      .pill {
+        margin-top: rem(58);
+        border-color: $unclic-white-0;
+      }
+      .title-top,
+      .text-top,
+      .link {
+        margin-top: rem(30);
+      }
+      .link {
+        color: $unclic-white-0;
+        svg {
+          margin-right: rem(10);
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        padding-top: rem(32);
+        padding-bottom: rem(32);
+        .title-menu {
+          margin-bottom: rem(30);
+        }
+        .text-numeration {
+          margin-top: rem(18);
+          margin-bottom: rem(44);
+        }
+        .rigth-margin {
+          right: rem(76);
+          top: rem(18);
+        }
+        .pill {
+          margin-top: rem(298);
+        }
+        .title-top,
+        .text-top,
+        .link {
+          margin-top: rem(43);
+        }
+        .link {
+          svg {
+            margin-right: rem(16);
+          }
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .container {
+        .rigth-margin {
+          right: rem(160);
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      .container {
+        padding-top: rem(42);
+        padding-bottom: rem(154);
+        .title-menu {
+          margin-bottom: rem(40);
+        }
+        .text-numeration {
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-top: rem(34);
+        }
+        .rigth-margin {
+          right: none;
+          position: initial;
+          top: none;
+        }
+        .pill {
+          margin-top: rem(50);
+        }
+        .title-top,
+        .text-top,
+        .link {
+          margin-top: rem(30);
+        }
+        .link {
+          svg {
+            margin-right: rem(10);
+          }
+        }
+      }
+    }
+  }
+  

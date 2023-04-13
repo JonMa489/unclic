@@ -170,89 +170,125 @@ body {
     padding: 0.625rem 1.625rem;
   }
 }
-.home .header {
-  padding-top: 1.875rem;
-  padding-bottom: 2rem;
+.header-home {
   color: #FFFFFF;
-  position: relative;
 }
-.home .header .LogoUNAV {
+.header-home .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.header-home .container .space-bottom {
+  border-bottom: 1px solid #FFFFFF;
+  width: 300%;
   position: absolute;
-  right: 0;
+  left: -100%;
 }
-.home .header .title-menu {
+.header-home .container .title-menu {
   margin-bottom: 1.875rem;
 }
-.home .header .card-numeration {
-  padding-top: 0.75rem;
-  padding-bottom: 0.8125rem;
+.header-home .container .text-numeration {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
 }
-.home .header .card-new {
-  padding-top: 3.625rem;
+.header-home .container .rigth-margin {
+  right: 3.5rem;
+  position: absolute;
+  top: 0.75rem;
 }
-.home .header .card-new .pill {
+.header-home .container .rigth-margin .text-numeration {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header-home .container .pill {
+  margin-top: 3.625rem;
   border-color: #FFFFFF;
 }
-.home .header .card-new .title-top,
-.home .header .card-new .text-top,
-.home .header .card-new .link {
+.header-home .container .title-top,
+.header-home .container .text-top,
+.header-home .container .link {
   margin-top: 1.875rem;
 }
-.home .header .card-new .link svg {
+.header-home .container .link {
+  color: #FFFFFF;
+}
+.header-home .container .link svg {
   margin-right: 0.625rem;
 }
+.header-home .container a {
+  text-decoration: none;
+}
 @media (min-width: 768px) {
-  .home .header {
-    padding-top: 2.125rem;
-    padding-bottom: 3.0625rem;
+  .header-home .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
-  .home .header .title-menu {
+  .header-home .container .title-menu {
     margin-bottom: 1.875rem;
   }
-  .home .header .card-numeration {
-    padding-top: 1.0625rem;
-    padding-bottom: 1.25rem;
+  .header-home .container .text-numeration {
+    margin-top: 1.125rem;
+    margin-bottom: 2.75rem;
   }
-  .home .header .card-new {
-    padding-top: 18.5625rem;
+  .header-home .container .rigth-margin {
+    right: 4.75rem;
+    top: 1.125rem;
   }
-  .home .header .card-new .title-top,
-  .home .header .card-new .text-top,
-  .home .header .card-new .link {
-    margin-top: 1.875rem;
+  .header-home .container .pill {
+    margin-top: 18.625rem;
   }
-  .home .header .card-new .link {
-    color: #FFFFFF;
+  .header-home .container .title-top,
+  .header-home .container .text-top,
+  .header-home .container .link {
+    margin-top: 2.6875rem;
   }
-  .home .header .card-new .link svg {
-    margin-right: 0.625rem;
+  .header-home .container .link svg {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .header-home .container .rigth-margin {
+    right: 10rem;
   }
 }
 @media (min-width: 1200px) {
-  .home .header {
+  .header-home .container {
     padding-top: 2.625rem;
-    padding-bottom: 9.5625rem;
+    padding-bottom: 9.625rem;
   }
-  .home .header .title-menu {
-    margin-bottom: 1.875rem;
+  .header-home .container .title-menu {
+    margin-bottom: 2.5rem;
   }
-  .home .header .card-numeration {
-    padding-top: 2.125rem;
-    padding-bottom: 2.9375rem;
+  .header-home .container .text-numeration {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 2.125rem;
   }
-  .home .header .card-new {
-    padding-top: 3.125rem;
+  .header-home .container .rigth-margin {
+    right: none;
+    position: initial;
+    top: none;
   }
-  .home .header .card-new .title-top,
-  .home .header .card-new .text-top,
-  .home .header .card-new .link {
+  .header-home .container .pill {
+    margin-top: 3.125rem;
+  }
+  .header-home .container .title-top,
+  .header-home .container .text-top,
+  .header-home .container .link {
     margin-top: 1.875rem;
   }
-  .home .header .card-new .link {
-    color: #FFFFFF;
-  }
-  .home .header .card-new .link svg {
+  .header-home .container .link svg {
     margin-right: 0.625rem;
+  }
+}
+
+.footer ul {
+  list-style-type: none;
+}
+@media (min-width: 1200px) {
+  .footer ul li {
+    margin-right: 1.0625rem;
+    margin-left: 0;
+    display: inline-block;
   }
 }
 

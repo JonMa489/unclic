@@ -1,0 +1,19 @@
+.footer {
+  ul {
+    list-style-type: none;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+    ul {
+   
+      li {
+        margin-right: rem(17);
+        margin-left: 0;
+        display: inline-block;
+      }
+    }
+  }
+}
