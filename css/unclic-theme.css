@@ -10,20 +10,18 @@
   font-weight: 400;
   font-style: italic;
 }
-.background-blue {
-  background-color: rgb(146, 146, 227);
+.space-bottom {
+  border-bottom: 1px solid #FFFFFF;
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
 
-.background-yellow {
-  background-color: yellow;
-}
-
-.background-green {
-  background-color: green;
-}
-
-.background-red {
-  background-color: rgb(226, 75, 75);
+.space-bottom-black {
+  border-bottom: 1px solid #000000;
+  width: 200%;
+  position: absolute;
+  left: -100%;
 }
 
 body {
@@ -165,6 +163,15 @@ body {
   display: inline-block;
 }
 
+.text-footer {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.03em;
+}
+
 @media (min-width: 768px) {
   .pill {
     padding: 0.625rem 1.625rem;
@@ -177,11 +184,9 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.header-home .container .space-bottom {
-  border-bottom: 1px solid #FFFFFF;
-  width: 300%;
+.header-home .container .logoUNAV {
   position: absolute;
-  left: -100%;
+  right: 0;
 }
 .header-home .container .title-menu {
   margin-bottom: 1.875rem;
@@ -191,7 +196,7 @@ body {
   margin-bottom: 2rem;
 }
 .header-home .container .rigth-margin {
-  right: 3.5rem;
+  right: 5.625rem;
   position: absolute;
   top: 0.75rem;
 }
@@ -230,7 +235,7 @@ body {
     margin-bottom: 2.75rem;
   }
   .header-home .container .rigth-margin {
-    right: 4.75rem;
+    right: 3.5rem;
     top: 1.125rem;
   }
   .header-home .container .pill {
@@ -243,11 +248,6 @@ body {
   }
   .header-home .container .link svg {
     margin-right: 1rem;
-  }
-}
-@media (min-width: 992px) {
-  .header-home .container .rigth-margin {
-    right: 10rem;
   }
 }
 @media (min-width: 1200px) {
@@ -281,17 +281,85 @@ body {
   }
 }
 
-.footer ul {
-  list-style-type: none;
+.main-home .card-new .pill {
+  margin-top: 3.125rem;
+}
+.main-home .card-new .image {
+  margin-top: 1.75rem;
+  margin-bottom: 3.125rem;
+}
+.main-home .card-new .title {
+  margin-top: 1.625rem;
+  max-height: calc(5 * 2rem);
+  overflow: hidden;
+  height: 8rem;
+  text-overflow: ellipsis;
+}
+.main-home .card-new .subtitle {
+  margin-top: 1.25rem;
+}
+.main-home .card-new .text {
+  margin-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .main-home .card-new .pill {
+    margin-top: 3.25rem;
+  }
+  .main-home .card-new .image {
+    margin-top: 3.25rem;
+    margin-bottom: 18.625rem;
+  }
+  .main-home .card-new .title {
+    margin-top: 1.5rem;
+    max-height: calc(5 * 2.375rem);
+    height: 12.125rem;
+  }
+  .main-home .card-new .subtitle {
+    margin-top: 1.125rem;
+  }
+  .main-home .card-new .text {
+    margin-top: 1.5rem;
+    margin-bottom: 2.875rem;
+  }
 }
 @media (min-width: 1200px) {
-  .footer ul li {
-    margin-right: 1.0625rem;
-    margin-left: 0;
-    display: inline-block;
+  .main-home .card-new .pill {
+    margin-top: 3rem;
+  }
+  .main-home .card-new .image {
+    margin-top: 0.875rem;
+    margin-bottom: 3.125rem;
+  }
+  .main-home .card-new .title {
+    height: 12.125rem;
+  }
+  .main-home .card-new .subtitle {
+    margin-top: 1.125rem;
+  }
+  .main-home .card-new .text {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
+.footer .featured-links .pill {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.footer ul {
+  list-style-type: none;
+}
+.footer ul li {
+  margin-right: 1.0625rem;
+  margin-left: 0;
+  display: inline-block;
+}
+.footer .logoUNAV {
+  margin-top: 3.125rem;
+}
+.footer .subtitle {
+  margin-top: 1.875rem;
+}
 .banner-header {
   background-color: greenyellow;
   height: rem(60);

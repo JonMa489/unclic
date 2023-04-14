@@ -1,12 +1,12 @@
-.background-blue{
-    background-color: rgb(146, 146, 227);
+.space-bottom {
+  border-bottom: 1px solid $unclic-white-0;
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
-.background-yellow{
-    background-color: yellow;
-}
-.background-green{
-    background-color: green;
-}
-.background-red{
-    background-color: rgb(226, 75, 75);
+.space-bottom-black {
+  border-bottom: 1px solid $unclic-black-0;
+  width: 200%;
+  position: absolute;
+  left: -100%;
 }

@@ -1,19 +1,28 @@
 .footer {
+  .featured-links .pill{
+    background-color: $unclic-black-0;
+    color: $unclic-white-0;
+  }
+  
   ul {
     list-style-type: none;
+    li {
+      margin-right: rem(17);
+      margin-left: 0;
+      display: inline-block;
+    }
+  }
+  .logoUNAV{
+    margin-top: rem(50);
+  }
+  .subtitle{
+    margin-top: rem(30);
   }
   @media (min-width: 768px) {
   }
   @media (min-width: 992px) {
   }
   @media (min-width: 1200px) {
-    ul {
-   
-      li {
-        margin-right: rem(17);
-        margin-left: 0;
-        display: inline-block;
-      }
-    }
+    
   }
 }

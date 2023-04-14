@@ -82,3 +82,9 @@
     line-height: rem(26);
   }
 }
+@mixin text-footer-dm-sans {
+  @include dm-sans;
+  font-size: rem(14);
+  line-height: rem(18);
+  letter-spacing: -0.03em;
+}

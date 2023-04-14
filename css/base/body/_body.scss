@@ -35,6 +35,9 @@ body {
   padding-bottom: rem(4);
   display: inline-block;
 }
+.text-footer{
+  @include text-footer-dm-sans;
+}
 @media (min-width: 768px) {
   .pill {
     padding: rem(10) rem(26);
